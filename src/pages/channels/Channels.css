@@ -1,0 +1,42 @@
+main {
+  display: flex;
+  justify-content: center;
+
+}
+
+.channel {
+  width: 85vw;
+  height: 20vh;
+  background-color: #F2F2F2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.first-channel {
+  width: 5vw;
+  height: 7vh;
+  margin: 0 5vw;
+}
+
+.second-channel {
+  width: 6vw;
+  height: 3vh;
+}
+
+.channels-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 50vw;
+}
+
+.time-wrapper {
+  min-width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.time {
+  margin: 0 2vw 2vh 0;
+}

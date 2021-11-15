@@ -1,0 +1,39 @@
+.genres {
+  display: flex;
+  justify-content: space-between;
+}
+
+.genre-container {
+  height: 18vh;
+  width: 16vw;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.25em;
+}
+
+.comedy {
+  background: linear-gradient(127.83deg, #F2C94C 8.44%, #F29A4A 91.36%);
+}
+
+.drama {
+  background: linear-gradient(127.83deg, #F2994A 8.44%, #EB5757 91.36%);
+}
+
+.fantastic {
+  background: linear-gradient(127.83deg, #56CCF2 8.44%, #2F80ED 91.36%);
+}
+
+.horror {
+  background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
+}
+
+p {
+  color: #FFFFFF;
+  font-size: 0.6em;
+  margin-top: 4vh;
+  margin-bottom: 3vh;
+}

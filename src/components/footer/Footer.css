@@ -1,0 +1,30 @@
+footer {
+  background: #F2F2F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+
+.logo {
+  height: 4em;
+  width: 1.999em;
+  margin-right: 2.499em;
+}
+
+.credentials {
+  color: #333333;
+  padding-bottom: 0.375em;
+  line-height: 1.475em;
+  display: flex;
+  flex-direction: column;
+}
+
+.website {
+  color: #1F4766;
+  padding-top: 0.625em;
+}
+
+.address {
+  font-size: 16px;
+}

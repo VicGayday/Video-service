@@ -1,0 +1,16 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 10vw;
+}
+
+h3 {
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 2vh;
+}
+
+h3.genres {
+  margin-top: 4vh;
+}

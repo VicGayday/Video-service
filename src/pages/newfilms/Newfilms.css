@@ -1,0 +1,25 @@
+.newfilms {
+  display: flex;
+  justify-content: space-between;
+}
+
+.film-icon {
+  height: 30vh;
+  width: 15vw;
+  margin-bottom: 1vh;
+}
+
+.film-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 15vw;
+}
+
+.film-title {
+  font-weight: 400;
+  color: #333333;
+
+}
+

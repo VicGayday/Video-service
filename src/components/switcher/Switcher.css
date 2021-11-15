@@ -1,0 +1,18 @@
+.link {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 1.5em;
+}
+
+.active {
+  color: #E5261E;
+  border-bottom: 2px solid #E5261E;
+  padding-bottom: 9px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
