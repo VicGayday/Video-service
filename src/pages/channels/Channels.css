@@ -6,22 +6,24 @@ main {
 
 .channel {
   width: 85vw;
-  height: 20vh;
+  min-height: 16vh;
   background-color: #F2F2F2;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 2vh;
 }
 
 .first-channel {
   width: 5vw;
   height: 7vh;
-  margin: 0 5vw;
+  margin: 0 9vw;
 }
 
-.second-channel {
-  width: 6vw;
-  height: 3vh;
+.channel-logo {
+  width: 9vw;
+  height: 6vh;
+  margin: 0 7vw;
 }
 
 .channels-wrapper {
@@ -38,5 +40,29 @@ main {
 }
 
 .time {
-  margin: 0 2vw 2vh 0;
+  margin: 0 2vw 1.5vh 0;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.rbk-channel {
+  height: 5vh;
+  width: 4vw;
+  margin: 0 9vw;
+}
+
+.channel-title {
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.current-show {
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+.a-channel {
+  height: 6vh;
+  width: 5vw;
+  margin: 0 9vw;
 }
