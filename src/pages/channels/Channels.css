@@ -21,8 +21,8 @@ main {
 }
 
 .channel-logo {
-  width: 9vw;
-  height: 6vh;
+  width: 6vw;
+  height: 7vh;
   margin: 0 7vw;
 }
 
@@ -45,12 +45,6 @@ main {
   font-weight: 400;
 }
 
-.rbk-channel {
-  height: 5vh;
-  width: 4vw;
-  margin: 0 9vw;
-}
-
 .channel-title {
   font-weight: 500;
   font-size: 1em;
@@ -61,8 +55,6 @@ main {
   font-size: 0.8em;
 }
 
-.a-channel {
-  height: 6vh;
-  width: 5vw;
-  margin: 0 9vw;
+.first-line {
+  color: red;
 }

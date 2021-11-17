@@ -11,21 +11,31 @@ const Newfilms = () => {
     <React.Fragment>
       <section className="newfilms">
         <section className="film-container">
-          <img className="film-icon" src={cat} alt="cat"></img>
+          <object className="film-icon" type="image/svg+xml" data={cat} />
           <h5 className="film-title">
             Мульт в кино. Выпуск №103. Некогда грустить!
           </h5>
         </section>
         <section className="film-container">
-          <img className="film-icon" src={batman} alt="batman"></img>
+          <object
+            className="film-icon"
+            data={batman}
+            alt="batman"
+            type="image/svg+xml"
+          />
           <h5 className="film-title">Новый Бэтмен</h5>
         </section>
         <section className="film-container">
-          <img className="film-icon" src={hollywood} alt="hollywood"></img>
+          <object
+            className="film-icon"
+            data={hollywood}
+            alt="hollywood"
+            type="image/svg+xml"
+          />
           <h5 className="film-title">Однажды...в Голливуде</h5>
         </section>
         <section className="film-container">
-          <img className="film-icon" src={strippers} alt="strippers"></img>
+          <object className="film-icon" data={strippers} alt="strippers" type="image/svg+xml" />
           <h5 className="film-title">Стриптизершы</h5>
         </section>
       </section>

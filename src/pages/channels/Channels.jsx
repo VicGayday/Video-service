@@ -7,93 +7,80 @@ import a from '../../assets/a.png'
 import './Channels.css'
 
 const Channels = () => {
+
+  const channels = [
+    {
+      image: first,
+      channelTitle: "Первый канал",
+      timeFirst: "13:00",
+      currentShowFirst: "Новости (с субтитрами)",
+      timeSecond: "14:00",
+      currentShowSecond: "Давай поженимся",
+      timeThird: "15:00",
+      currentShowThird: "Другие новости",
+    },
+    {
+      image: dva,
+      channelTitle: "2х2",
+      timeFirst: "13:00",
+      currentShowFirst: "МУЛЬТ ТВ. Сезон 4, 7 серия",
+      timeSecond: "14:00",
+      currentShowSecond: "ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия",
+      timeThird: "15:00",
+      currentShowThird: "БУРДАШЕВ. Сезон 1, 20 серия",
+    },
+    {
+      image: rbk,
+      channelTitle: "РБК",
+      timeFirst: "13:00",
+      currentShowFirst: "ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС",
+      timeSecond: "14:00",
+      currentShowSecond: "ДЕНЬ. Главные темы",
+      timeThird: "15:00",
+      currentShowThird: "Главные новости",
+    },
+    {
+      image: a,
+      channelTitle: "AMEDIA PREMIUM",
+      timeFirst: "13:00",
+      currentShowFirst: "Клиент всегда мёртв",
+      timeSecond: "14:00",
+      currentShowSecond: "Голодные игры: Сойка-пересмешница. Часть I",
+      timeThird: "15:00",
+      currentShowThird: "Секс в большом городе",
+    },
+  ];
+
   return (
     <main>
-      <section className="channel">
-        <img className="first-channel" src={first} alt="channel-logo" />
-        <div className="channels-wrapper">
-          <h3 className="channel-title">Первый канал</h3>
-          <div className="time-wrapper">
-            <section className="time">13:00</section>
-            <section className="current-show">Новости (с субтитрами)</section>
+      {channels.map((channel) => (
+        <section className="channel">
+          <img
+            className="channel-logo"
+            src={channel.image}
+            alt="channel-logo"
+          />
+          <div className="channels-wrapper">
+            <h3 className="channel-title">{channel.channelTitle}</h3>
+            <div className="time-wrapper">
+              <section className="time first-line">{channel.timeFirst}</section>
+              <section className="current-show first-line">
+                {channel.currentShowFirst}
+              </section>
+            </div>
+            <div className="time-wrapper">
+              <section className="time">{channel.timeSecond}</section>
+              <section className="current-show">
+                {channel.currentShowSecond}
+              </section>
+            </div>
+            <div className="time-wrapper">
+              <section className="time">{channel.timeThird}</section>
+              <section className="current-show">{channel.currentShowThird}</section>
+            </div>
           </div>
-          <div className="time-wrapper">
-            <section className="time">14:00</section>
-            <section className="current-show">Давай поженимся</section>
-          </div>
-          <div className="time-wrapper">
-            <section className="time">15:00</section>
-            <section className="current-show">Другие новости</section>
-          </div>
-        </div>
-      </section>
-
-      <section className="channel">
-        <img src={dva} alt="second-channel" className="channel-logo" />
-        <div className="channels-wrapper">
-          <h3 className="channel-title">2x2</h3>
-          <div className="time-wrapper">
-            <section className="time">13:00</section>
-            <section className="current-show">
-              МУЛЬТ ТВ. Сезон 4, 7 серия
-            </section>
-          </div>
-          <div className="time-wrapper">
-            <section className="time">14:00</section>
-            <section className="current-show">
-              ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия
-            </section>
-          </div>
-          <div className="time-wrapper">
-            <section className="time">15:00</section>
-            <section className="current-show">
-              БУРДАШЕВ. Сезон 1, 20 серия
-            </section>
-          </div>
-        </div>
-      </section>
-
-      <section className="channel">
-        <img src={rbk} alt="third-channel" className="rbk-channel" />
-        <div className="channels-wrapper">
-          <h3 className="channel-title">РБК</h3>
-          <div className="time-wrapper">
-            <section className="time">13:00</section>
-            <section className="current-show">
-              ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС
-            </section>
-          </div>
-          <div className="time-wrapper">
-            <section className="time">14:00</section>
-            <section className="current-show">ДЕНЬ. Главные темы</section>
-          </div>
-          <div className="time-wrapper">
-            <section className="time">15:00</section>
-            <section className="current-show">Главные новости</section>
-          </div>
-        </div>
-      </section>
-
-      <section className="channel">
-        <img src={a} alt="forth-channel" className="a-channel" />
-        <div className="channels-wrapper">
-          <h3 className="channel-title">AMEDIA PREMIUM</h3>
-          <div className="time-wrapper">
-            <section className="time">13:00</section>
-            <section className="current-show">Клиент всегда мёртв</section>
-          </div>
-          <div className="time-wrapper">
-            <section className="time">14:00</section>
-            <section className="current-show">
-              Голодные игры: Сойка-пересмешница. Часть I
-            </section>
-          </div>
-          <div className="time-wrapper">
-            <section className="time">15:00</section>
-            <section className="current-show">Секс в большом городе</section>
-          </div>
-        </div>
-      </section>
+        </section>
+      ))}
     </main>
   );
 }
