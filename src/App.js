@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom'
+import React from 'react'
 
 import Routes from "./routes/Routes";
 import Header from "./components/header/Header";
@@ -7,6 +7,7 @@ import Switcher from './components/switcher/Switcher'
 import "./App.css";
 
 function App() {
+
   return (
     <div className="App">
       <Header />

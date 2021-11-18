@@ -11,7 +11,7 @@ const Newfilms = () => {
     <React.Fragment>
       <section className="newfilms">
         <section className="film-container">
-          <object className="film-icon" type="image/svg+xml" data={cat} />
+          <object className="film-icon" type="image/svg+xml" data={cat} aria-label="cat" />
           <h5 className="film-title">
             Мульт в кино. Выпуск №103. Некогда грустить!
           </h5>
@@ -20,7 +20,7 @@ const Newfilms = () => {
           <object
             className="film-icon"
             data={batman}
-            alt="batman"
+            aria-label="batman"
             type="image/svg+xml"
           />
           <h5 className="film-title">Новый Бэтмен</h5>
@@ -29,13 +29,13 @@ const Newfilms = () => {
           <object
             className="film-icon"
             data={hollywood}
-            alt="hollywood"
+            aria-label="hollywood"
             type="image/svg+xml"
           />
           <h5 className="film-title">Однажды...в Голливуде</h5>
         </section>
         <section className="film-container">
-          <object className="film-icon" data={strippers} alt="strippers" type="image/svg+xml" />
+          <object className="film-icon" data={strippers} aria-label="strippers" type="image/svg+xml" />
           <h5 className="film-title">Стриптизершы</h5>
         </section>
       </section>

@@ -3,9 +3,12 @@ import React, { useState } from "react";
 import "./Header.css";
 import MyInput from "../UI/input/MyInput";
 import MyButton from "../UI/button/MyButton";
+import MyModal from "../UI/modal/MyModal";
+import Login from '../login/Login'
 
 const Header = () => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("")
+  const [modal, setModal] = useState(false);
 
   return (
     <header>
@@ -28,6 +31,10 @@ const Header = () => {
         <div className="logo-text">Видеосервис</div>
       </div>
 
+      <MyModal visible={modal} setVisible={setModal}>
+        <Login />
+      </MyModal>
+
       <form>
         <MyInput
           type="text"
@@ -35,10 +42,11 @@ const Header = () => {
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Поиск..."
         />
-            <button type="button" className="find">Найти</button>
+        <button type="button" className="find">
+          Найти
+        </button>
       </form>
-
-      <MyButton>Войти</MyButton>
+      <MyButton onClick={() => setModal(!modal)}>Войти</MyButton>
     </header>
   );
 };
