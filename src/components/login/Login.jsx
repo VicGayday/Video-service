@@ -1,11 +1,16 @@
-import React from 'react';
+import React from 'react'
+
+import MyButton from '../UI/button/MyButton'
+import './Login.css'
 
 const Login = () => {
   return (
     <section className="form-container">
+      <h5 className="login-title">Вход</h5>
       <form>
-        <label htmlFor="username">Username</label>
+        {/* <label htmlFor="username">Username</label> */}
         <input
+          className="input login"
           // onChange={(e) => {
           //   dispatch(updateLogin(e.target.value));
           // }}
@@ -13,11 +18,12 @@ const Login = () => {
           name="username"
           id="username"
           // value={login}
-          placeholder="Username"
+          placeholder="Логин"
         />
 
-        <label htmlFor="password">Password</label>
+        {/* <label htmlFor="password">Password</label> */}
         <input
+          className="input password"
           // onChange={(e) => {
           //   dispatch(updatePassword(e.target.value));
           // }}
@@ -25,12 +31,14 @@ const Login = () => {
           name="password"
           id="password"
           // value={password}
-          placeholder="******************"
+          placeholder="Пароль"
         />
+        <section className="checkbox-wrapper">
+          <input type="checkbox" />
+          <span>Запомнить</span>
+        </section>
       </form>
-      <button className="signin-button" type="button">
-        Sign In
-      </button>
+      <MyButton>Войти</MyButton>
     </section>
   );
 }
