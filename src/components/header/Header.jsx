@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
+import { useSelector } from "react-redux"
+import { Link } from 'react-router-dom'
 
 import "./Header.css";
 import MyInput from "../UI/input/MyInput";
@@ -7,6 +9,10 @@ import MyModal from "../UI/modal/MyModal";
 import Login from '../login/Login'
 
 const Header = () => {
+  const loggedUser = useSelector((s) => s.auth.login)
+  const isAuth = useSelector((s) => s.auth.isAuth)
+  console.log(isAuth);
+
   const [search, setSearch] = useState("")
   const [modal, setModal] = useState(false);
 
@@ -32,7 +38,7 @@ const Header = () => {
       </div>
 
       <MyModal visible={modal} setVisible={setModal}>
-        <Login />
+        <Login modal={modal} setModal={setModal}/>
       </MyModal>
 
       <form>
@@ -46,7 +52,15 @@ const Header = () => {
           Найти
         </button>
       </form>
+      <section className="login-block">
+        {isAuth ? loggedUser : ''}
+
+      {!isAuth ?
       <MyButton onClick={() => setModal(!modal)}>Войти</MyButton>
+      :
+      <Link to="/">Выйти</Link>}
+      </section>
+
     </header>
   );
 };

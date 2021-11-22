@@ -44,3 +44,7 @@ form {
     height: 18px;
     margin-right: 0.7vw;
   }
+
+  input:focus {
+    outline: transparent;
+  }

@@ -54,7 +54,7 @@ const Channels = () => {
   return (
     <main>
       {channels.map((channel) => (
-        <section className="channel">
+        <section key={channel.channelTitle} className="channel">
           <img
             className="channel-logo"
             src={channel.image}
