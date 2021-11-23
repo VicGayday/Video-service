@@ -5,7 +5,7 @@ import './Switcher.css'
 const Switcher = () => {
   return (
     <section>
-      <NavLink className="link" activeClassName="active" to="/films">
+      <NavLink className="link" activeClassName="active" exact={true} to="/">
         Фильмы
       </NavLink>
       <NavLink className="link" activeClassName="active" to="/channels">
