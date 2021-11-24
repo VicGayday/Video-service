@@ -5,6 +5,8 @@ const UPDATE_AUTH = "UPDATE_AUTH";
 const initialState = {
   login: "",
   password: "",
+  correctLogin: 'Виталий',
+  correctPassword: '12345',
   isAuth: false,
 };
 

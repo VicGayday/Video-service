@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Cookies from 'universal-cookie'
 import { useDispatch, useSelector } from "react-redux";
 
 import { updateLogin, updatePassword, signIn } from '../../store/reducers/auth';
@@ -7,15 +8,25 @@ import './Login.css'
 
 const Login = ({modal, setModal}) => {
 
+  const cookies = new Cookies()
   const dispatch = useDispatch();
   const login = useSelector((s) => s.auth.login);
-  const password = useSelector((s) => s.auth.password);
+  const password = useSelector((s) => s.auth.password)
+  const correctLogin = useSelector((s) => s.auth.correctLogin);
+  const correctPassword = useSelector((s) => s.auth.correctPassword);
 
    const loginHandler = (event) => {
-    //  event.preventDefault();
+     event.preventDefault()
+     if (login === cookies.get('login') && password === cookies.get('password')) {
        dispatch(signIn(true))
        setModal(!modal)
-   };
+      }
+   }
+
+   useEffect(() => {
+     cookies.set("login", "Виталий", { path: "/" })
+       cookies.set("password", "12345", { path: "/" });
+   }, [])
 
   return (
     <section className="form-container">

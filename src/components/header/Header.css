@@ -35,7 +35,21 @@ header {
 
 .login-block {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
   min-width: 25vw;
+}
+
+.signout-button {
+  border: none;
+  background: none;
+  appearance: none;
+  color: #E5261E;
+  font-weight: 500;
+  margin-left: 2vw;
+}
+
+.signout-button:hover {
+  transform: scale(1.5);
+  transition: 1s ease-out all;
 }
