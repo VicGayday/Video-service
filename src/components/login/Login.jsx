@@ -31,7 +31,7 @@ const Login = ({modal, setModal}) => {
   return (
     <section className="form-container">
       <h5 className="login-title">Вход</h5>
-      <form>
+      <form className="loginform-container">
         <input
           className="input login"
           onChange={(e) => {

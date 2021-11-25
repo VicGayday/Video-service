@@ -1,14 +1,13 @@
 .myInput {
-  width: 320px;
-  height: 25px;
+  width: 35vw;
+  height: 5vh;
   opacity: 100%;
   border: none;
   border-bottom: 1px solid #333333;
   outline: none;
   background-color: #FFFFFF;
-;
+  margin-left: 6vw;
 }
 .myInput:focus {
   background-color: #FFFFFF;
-;
 }

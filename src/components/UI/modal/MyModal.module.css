@@ -21,3 +21,10 @@
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 414px) {
+  .myModalContent {
+    width: 70vw;
+    height: 48vh;
+  }
+}
